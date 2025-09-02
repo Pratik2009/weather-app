@@ -1,0 +1,13 @@
+
+
+/* Container */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  
+  background: rgba(166, 153, 153, 0.526);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.553);
+  text-align: center;
+}

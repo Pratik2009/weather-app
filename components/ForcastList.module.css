@@ -1,0 +1,51 @@
+.forecast {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(166, 153, 153, 0.526);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.553);
+  color: #fff;
+}
+
+.heading{
+      text-align: center;
+    color: black;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.item {
+  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.553);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.description img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.item:hover{
+   background: #4dabd7b3;
+}

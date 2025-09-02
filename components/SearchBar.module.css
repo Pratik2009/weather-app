@@ -1,0 +1,74 @@
+/* .container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
+
+.history {
+  margin-top: 10px;
+}
+
+.historyButton {
+  background: #e5e7eb;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.historyButton:hover {
+  background: #d1d5db;
+} */
+
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.searchForm input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 5px 5px;
+}
+.searchForm button {
+  padding: 10px 15px;
+  border: none;
+  background: #0070f3;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
