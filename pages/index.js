@@ -36,13 +36,13 @@ export default function Home() {
       if (!forecastRes.ok) throw new Error("Forecast not found");
       const forecastData = await forecastRes.json();
 
-      // FOR 5 days 
+      // for next 5 days 
       const dailyForecast = forecastData.list.filter((item) =>
         item.dt_txt.includes("12:00:00")
       );
       setForecast(dailyForecast.slice(0, 6));
 
-      // Update search history
+      // for Update search history
       if (!history.includes(searchCity)) {
         setHistory([searchCity, ...history].slice(0, 5));
       }
@@ -52,45 +52,45 @@ export default function Home() {
       setLoading(false);
     }
   };
- const fetchWeatherByCoords = async (lat, lon) => {
-    setLoading(true);
-    try {
-      const weatherRes = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
-      );
-      const weatherData = await weatherRes.json();
-      setWeather(weatherData);
+//  const fetchWeatherByCoords = async (lat, lon) => {
+//     setLoading(true);
+//     try {
+//       const weatherRes = await fetch(
+//         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+//       );
+//       const weatherData = await weatherRes.json();
+//       setWeather(weatherData);
 
-      const forecastRes = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
-      );
-      const forecastData = await forecastRes.json();
+//       const forecastRes = await fetch(
+//         `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+//       );
+//       const forecastData = await forecastRes.json();
 
-      const dailyForecast = forecastData.list.filter((item) =>
-        item.dt_txt.includes("12:00:00")
-      );
-      setForecast(dailyForecast.slice(0, 6));
-    } catch (err) {
-      alert("Unable to fetch weather by location");
-    } finally {
-      setLoading(false);
-    }
-  };
+//       const dailyForecast = forecastData.list.filter((item) =>
+//         item.dt_txt.includes("12:00:00")
+//       );
+//       setForecast(dailyForecast.slice(0, 6));
+//     } catch (err) {
+//       alert("Unable to fetch weather by location");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
 
-  // Run only on first load → get user location
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          const { latitude, longitude } = pos.coords;
-          fetchWeatherByCoords(latitude, longitude);
-        },
-        (err) => {
-          console.warn("Geolocation blocked, please search manually.", err);
-        }
-      );
-    }
-  }, []);
+//   // Run only on first load → get user location
+//   useEffect(() => {
+//     if (navigator.geolocation) {
+//       navigator.geolocation.getCurrentPosition(
+//         (pos) => {
+//           const { latitude, longitude } = pos.coords;
+//           fetchWeatherByCoords(latitude, longitude);
+//         },
+//         (err) => {
+//           console.warn("Geolocation blocked, please search manually.", err);
+//         }
+//       );
+//     }
+//   }, []);
    
 
   const handleSearch = (e) => {

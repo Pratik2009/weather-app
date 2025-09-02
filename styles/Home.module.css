@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 .container {
   max-width: 800px;
@@ -20,7 +20,6 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-
 
 .main {
   flex: 1;
@@ -78,8 +77,41 @@
   transform: translateY(1px);
 }
 
-/* Responsive tweaks
-@media (max-width: 520px) {
-  .searchForm { gap: 8px; }
-  .button { padding: 11px 14px; }
-} */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    width: 60%;
+  }
+
+  .forecastGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .page {
+    min-height: 104vh;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    min-height: 104vh;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .button {
+    margin-left: 0;
+  }
+
+  .searchForm {
+    align-items: stretch;
+  }
+}

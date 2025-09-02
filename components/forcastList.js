@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ForecastList({ data }) {
   return (
     <div className={styles.forecast}>
-      <h3 className={styles.heading}>5-Day Forecast</h3>
+      <h3 className={styles.heading}>5-day Weather forecast</h3>
       <div className={styles.list}>
         {data.map((day, idx) => (
           <div key={idx} className={styles.item}>
